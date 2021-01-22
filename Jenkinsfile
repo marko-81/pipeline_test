@@ -14,7 +14,7 @@ pipeline {
                 }
                 bat """
                     cd C:\\script
-                    python test_share.py -u %creds_usr% -p %creds_psw% -path C:\\Copy
+                    python test_share.py -u %creds_usr% -p %creds_psw% -path %path%
                 """    
             }
         }
