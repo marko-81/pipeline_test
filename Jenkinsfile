@@ -2,7 +2,7 @@ pipeline {
     agent none
     environment {
         creds = credentials('get-share')
-        project_name = env.JOB_NAME
+        project_name = 'env.JOB_NAME'
     }
     stages {
         stage('Run Task on 1st slave') {
