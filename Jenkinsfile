@@ -2,6 +2,7 @@ pipeline {
     agent none
     environment {
         creds = credentials('get-share')
+        project_name = en.JOB_NAME
     }
     stages {
         stage('Run Task on 1st slave') {
@@ -14,7 +15,7 @@ pipeline {
                 }
                 bat """
                     cd C:\\script
-                    python test_share.py -u %creds_usr% -p %creds_psw% -path %location%
+                    python test_share.py -u %creds_usr% -p %creds_psw% -path %location% -pname %project_name%
                 """    
             }
         }
