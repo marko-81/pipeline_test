@@ -21,7 +21,7 @@ pipeline {
         }
         stage('Run Task on 2nd slave') {
             agent {
-                    label params.server
+                    label params.server2
                 }
             steps {
                 script {
