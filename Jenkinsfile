@@ -7,7 +7,7 @@ pipeline {
     stages {
         stage('Run Task on 1st slave') {
             agent {
-                    label 'win_slaves'
+                    label params.server
                 }
             steps {
                 script {
