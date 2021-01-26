@@ -20,7 +20,8 @@ pipeline {
             }
         }
         stage('Run Task on 2nd slave') {
-            agent {label 'win_slave2'
+            agent {
+                    label params.server
                 }
             steps {
                 script {
