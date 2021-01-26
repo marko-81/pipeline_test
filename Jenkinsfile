@@ -2,12 +2,12 @@ pipeline {
     agent none
     environment {
         creds = credentials('get-share')
-        project_name = "${env.JOB_NAME}"
+        project_name = "${env.JOB_NAME}" //use environment JOB_NAME variable
     }
     stages {
         stage('Run Task on 1st slave') {
             agent {
-                    label params.server
+                    label params.server //use a parameter defined in job
                 }
             steps {
                 script {
