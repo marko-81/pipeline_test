@@ -1,3 +1,5 @@
 This is new file added from let say another user, after the clone to local machine is done to test the git fetch command.
 
 This is new line added localy!
+
+This is some hotfix called hotfix1!
